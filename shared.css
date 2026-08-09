@@ -2151,3 +2151,248 @@ line-height:1.05 !important;
     flex: 0 0 auto;
   }
 }
+
+/* =========================================================
+   STUDENT NOTEBOOK - MOBILE
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+  .notebook-app {
+    display: block;
+  }
+
+  .notebook-sidebar {
+    position: static;
+    width: 100%;
+    min-height: auto;
+    padding: 10px 12px;
+    border-right: 0;
+    border-bottom: 1px solid #e6ddd4;
+  }
+
+  .sidebar-nav {
+    display: flex;
+    gap: 6px;
+    overflow-x: auto;
+    padding-bottom: 2px;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .sidebar-link {
+    flex: 0 0 auto;
+    min-width: max-content;
+    padding: 9px 11px;
+  }
+
+  .sidebar-help {
+    margin-top: 10px;
+  }
+
+  .notebook-main {
+    width: 100%;
+    padding: 16px;
+  }
+
+  .notebook-header {
+    padding: 12px 14px;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .notebook-header-tools {
+    width: 100%;
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  .compact-control {
+    flex: 1 1 140px;
+  }
+
+  .welcome-row {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .streak-card {
+    width: 100%;
+  }
+
+  .quick-actions {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .writing-card,
+  .recent-card,
+  .tip-card,
+  .achievements-card,
+  .progress-card,
+  .calendar-card {
+    min-width: 0;
+  }
+
+  .writing-controls {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .level-control,
+  .main-journal-date,
+  .writing-font-control {
+    width: 100%;
+  }
+
+  .level-control select,
+  .main-journal-date input,
+  .writing-font-control select {
+    width: 100%;
+  }
+
+  .recommend-button,
+  .surprise-button {
+    width: 100%;
+    justify-content: center;
+    min-height: 44px;
+  }
+
+  .recommendation-panel {
+    display: block;
+  }
+
+  .recommendation-actions {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .editor-toolbar {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    gap: 5px;
+    padding-bottom: 5px;
+  }
+
+  .editor-toolbar button {
+    flex: 0 0 auto;
+    min-width: 38px;
+    min-height: 38px;
+  }
+
+  .notebook-paper textarea,
+  #journalText {
+    min-height: 320px;
+    font-size: 16px;
+    line-height: 1.8;
+  }
+
+  .notebook-editor-footer {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .action-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+
+  .action-group .button {
+    width: 100%;
+    min-height: 44px;
+  }
+
+  .dashboard-stack {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .calendar-widget {
+    overflow: hidden;
+  }
+
+  .calendar-grid {
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 560px) {
+
+  .notebook-main {
+    padding: 12px;
+  }
+
+  .notebook-header-tools {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .avatar-button {
+    grid-column: 1 / -1;
+    width: 100%;
+  }
+
+  .writing-controls {
+    grid-template-columns: 1fr;
+  }
+
+  .category-tabs {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .category-tab {
+    flex: 0 0 auto;
+  }
+
+  .paper {
+    padding: 12px;
+  }
+
+  .notebook-paper textarea,
+  #journalText {
+    min-height: 360px;
+  }
+
+  .action-group {
+    grid-template-columns: 1fr;
+  }
+
+  .recommendation-actions button {
+    flex: 1 1 auto;
+  }
+
+  .guest-save-notice {
+    margin: 0;
+    border-radius: 0;
+  }
+
+  .guest-save-copy {
+    align-items: flex-start;
+  }
+
+  .notebook-footer {
+    display: block;
+  }
+
+  .notebook-footer > span:last-child {
+    margin-top: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+}
