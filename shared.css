@@ -2396,3 +2396,155 @@ line-height:1.05 !important;
     gap: 10px;
   }
 }
+
+/* =========================================================
+   STUDENT REVIEW PAGE - MOBILE
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+  .review-page-head {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .review-page-head > div:last-child {
+    display: flex !important;
+    flex-wrap: wrap;
+    gap: 8px;
+    width: 100%;
+  }
+
+  .review-page-head .button,
+  .review-page-head .writing-font-control {
+    flex: 1 1 160px;
+  }
+
+  .review-progress-line {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .review-compare-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .review-pane {
+    min-width: 0;
+  }
+
+  .review-pane-head {
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .review-writing {
+    font-size: 16px;
+    line-height: 1.8;
+    overflow-wrap: anywhere;
+  }
+
+  .teacher-note-card {
+    align-items: flex-start;
+  }
+
+  .discussion-card {
+    padding: 14px;
+  }
+
+  .discussion-head {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .discussion-live-pill {
+    width: fit-content;
+  }
+
+  .chat-thread {
+    max-height: 420px;
+  }
+
+  .chat-message {
+    max-width: 100%;
+  }
+
+  .chat-column {
+    min-width: 0;
+  }
+
+  .chat-bubble {
+    overflow-wrap: anywhere;
+  }
+
+  .chat-compose {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .chat-compose-avatar {
+    display: none;
+  }
+
+  .chat-compose-box {
+    width: 100%;
+  }
+
+  #messageInput {
+    width: 100%;
+    min-height: 100px;
+    font-size: 16px;
+    box-sizing: border-box;
+  }
+
+  .chat-compose-actions {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  #sendMessage {
+    width: 100%;
+    min-height: 44px;
+  }
+}
+
+@media (max-width: 560px) {
+
+  .review-progress-line {
+    grid-template-columns: 1fr;
+  }
+
+  .review-page-head > div:last-child {
+    display: grid !important;
+    grid-template-columns: 1fr;
+  }
+
+  .review-page-head .button,
+  .review-page-head .writing-font-control {
+    width: 100%;
+  }
+
+  .review-pane-head {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .nb-bookmark {
+    width: 100%;
+  }
+
+  .teacher-note-card {
+    display: grid;
+    grid-template-columns: auto 1fr;
+  }
+
+  .chat-thread {
+    max-height: 360px;
+  }
+}
