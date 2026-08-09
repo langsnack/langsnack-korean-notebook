@@ -3109,4 +3109,7 @@ line-height:1.05 !important;
   .guide-final {
     padding: 32px 18px;
   }
+  .dashboard-grid {
+  align-items: start;
+}
 }
