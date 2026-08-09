@@ -2548,3 +2548,117 @@ line-height:1.05 !important;
     max-height: 360px;
   }
 }
+
+/* =========================================================
+   MY WORK / HISTORY - MOBILE
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+  .nb-page-head {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .nb-work-card-wrap {
+    width: 100%;
+  }
+
+  .nb-work-card-main {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 10px;
+    align-items: start;
+    width: 100%;
+  }
+
+  .nb-work-card-main > span:last-child {
+    grid-column: 2;
+    text-align: left !important;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .nb-work-card-main > span:last-child time {
+    margin-top: 0 !important;
+  }
+
+  .nb-work-icon {
+    flex: 0 0 auto;
+  }
+
+  .nb-work-card-main strong {
+    overflow-wrap: anywhere;
+  }
+
+  .nb-work-card-main p {
+    margin-top: 5px;
+    line-height: 1.55;
+    overflow-wrap: anywhere;
+  }
+
+  .nb-work-actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+
+  .nb-work-actions a {
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    min-height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #searchInput,
+  #statusInput {
+    width: 100%;
+    min-height: 44px;
+    font-size: 16px;
+  }
+
+  #miniAchievement {
+    width: 100%;
+  }
+}
+
+@media (max-width: 560px) {
+
+  .nb-work-card-main {
+    grid-template-columns: 1fr;
+  }
+
+  .nb-work-icon {
+    display: none;
+  }
+
+  .nb-work-card-main > span:last-child {
+    grid-column: 1;
+  }
+
+  .nb-work-actions {
+    grid-template-columns: 1fr;
+  }
+
+  .nb-work-card-main p {
+    font-size: 14px;
+  }
+
+  .status-badge {
+    width: fit-content;
+  }
+
+  #miniAchievement {
+    align-items: flex-start;
+  }
+
+  .mini-achievement-copy {
+    min-width: 0;
+  }
+}
