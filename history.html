@@ -83,83 +83,110 @@ function renderAchievement(){
  const current=Math.min(count,next.n),percent=Math.min(100,Math.round(current/next.n*100));
  miniAchievement.innerHTML=`<span class="badge-medal">✦</span><div class="mini-achievement-copy"><small>Next achievement</small><strong>${next.name}</strong><span class="muted">${current} / ${next.n} writings</span><div class="badge-progress"><div class="badge-progress-bar"><i style="width:${percent}%"></i></div></div></div>`;
 }
-function draw(){
- const q=searchInput.value.toLowerCase(),s=statusInput.value;
- const all=getSubmissions().filter(x=>(s==='all'||x.status===s)&&`${x.title||''} ${x.studentPlain||''} ${x.category||''}`.toLowerCase().includes(q));
- workList.innerHTML=all.length?'':'<div class="nb-empty"><h2>No work here yet</h2><p>Start a new writing from your notebook.</p></div>';
- all.forEach(x=>{
-  const id=encodeURIComponent(x.id||x._id);
-  const row=document.createElement('article');row.className='nb-work-card-wrap';
-row.innerHTML = `
-  <a
-    class="nb-work-card-main"
-    href="submission.html?id=${id}"
-  >
-    <span class="nb-work-icon">
-      ${x.category === "Sentences" ? "≡" : "✎"}
-    </span>
+function draw() {
+  const q = searchInput.value.toLowerCase();
+  const s = statusInput.value;
 
-    <span>
-      <strong>
-        ${escapeHTML(
-          x.title ||
-          x.category ||
-          "Untitled"
-        )}
-      </strong>
+  const all = getSubmissions().filter(x =>
+    (s === "all" || x.status === s) &&
+    `${x.title || ""} ${x.studentPlain || ""} ${x.category || ""}`
+      .toLowerCase()
+      .includes(q)
+  );
 
-      <p>
-        ${
-          x.journalDate
-            ? `<small class="journal-date">
-                ${escapeHTML(x.journalDate)}
-              </small>`
-            : ""
-        }
+  workList.innerHTML = all.length
+    ? ""
+    : `
+      <div class="empty-state">
+        No work here yet.
+        <br>
+        Start a new writing from your notebook.
+      </div>
+    `;
 
-        ${escapeHTML(
-          (
-            x.studentPlain ||
-            x.attachments
-              ?.map(a => a.name)
-              .join(", ") ||
-            "Attachment submission"
-          ).slice(0, 100)
-        )}
-      </p>
-    </span>
+  all.forEach(x => {
+    const id = encodeURIComponent(
+      x.id || x._id
+    );
 
-    <span class="nb-work-meta">
-      <span class="${statusClass(x.status)}">
-        ${statusText(
-          x.status,
-          state.language
-        )}
-      </span>
+    const row = document.createElement("article");
 
-      <time>
-        ${relativeDate(x.submittedAt)}
-      </time>
-    </span>
-  </a>
+    row.className = "nb-work-card-wrap";
 
-  <div class="nb-work-actions">
-    <a
-      class="button-ghost"
-      href="submission.html?id=${id}"
-    >
-      Re-read
-    </a>
+    row.innerHTML = `
+      <a
+        class="nb-work-card-main"
+        href="submission.html?id=${id}"
+      >
+        <span class="nb-work-icon">
+          ${x.category === "Sentences" ? "≡" : "✎"}
+        </span>
 
-    <a
-      class="button button-secondary"
-      href="submit.html?id=${id}"
-    >
-      Edit
-    </a>
-  </div>
-`;  workList.appendChild(row)
- })
+        <span>
+          <strong>
+            ${escapeHTML(
+              x.title ||
+              x.category ||
+              "Untitled"
+            )}
+          </strong>
+
+          <p>
+            ${
+              x.journalDate
+                ? `
+                  <small class="journal-date">
+                    ${escapeHTML(x.journalDate)}
+                  </small>
+                `
+                : ""
+            }
+
+            ${escapeHTML(
+              (
+                x.studentPlain ||
+                x.attachments
+                  ?.map(a => a.name)
+                  .join(", ") ||
+                "Attachment submission"
+              ).slice(0, 100)
+            )}
+          </p>
+        </span>
+
+        <span class="nb-work-meta">
+          <span class="${statusClass(x.status)}">
+            ${statusText(
+              x.status,
+              state.language
+            )}
+          </span>
+
+          <time>
+            ${relativeDate(x.submittedAt)}
+          </time>
+        </span>
+      </a>
+
+      <div class="nb-work-actions">
+        <a
+          class="button-ghost"
+          href="submission.html?id=${id}"
+        >
+          Re-read
+        </a>
+
+        <a
+          class="button button-secondary"
+          href="submit.html?id=${id}"
+        >
+          Edit
+        </a>
+      </div>
+    `;
+
+    workList.appendChild(row);
+  });
 }
 searchInput.oninput=draw;statusInput.onchange=draw;document.querySelector('[data-nav="work"]').classList.add('active');languageSelect.value=state.language;renderAchievement();draw();
 
