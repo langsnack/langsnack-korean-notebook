@@ -58,10 +58,8 @@
   </aside>
 
   <main class="notebook-main">
-    <main class="notebook-main">
 
   <section class="welcome-row">
-    <section class="welcome-row">
       <div>
         <h1 id="welcomeHeading">Good evening!</h1>
         <p id="welcomeSubtitle">Keep writing. Keep growing.</p>
@@ -838,23 +836,7 @@ window.parent?.postMessage({
   source: "langsnack-journal",
   type: "appReady"
 }, "*");
-  const desktopNotice =
-  document.querySelector(
-    ".desktop-recommended-notice"
-  );
 
-const desktopNoticeClose =
-  document.querySelector(
-    ".desktop-notice-close"
-  );
-
-if (desktopNoticeClose) {
-  desktopNoticeClose.onclick = () => {
-    if (desktopNotice) {
-      desktopNotice.style.display = "none";
-    }
-  };
-}
 </script>
 </body>
 </html>
