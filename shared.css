@@ -2707,3 +2707,51 @@ line-height:1.05 !important;
     order: -1;
   }
 }
+/* =========================================================
+   DESKTOP RECOMMENDED NOTICE
+   ========================================================= */
+
+.desktop-recommended-notice {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .desktop-recommended-notice {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 12px;
+
+    margin: 0 0 14px;
+    padding: 11px 13px;
+
+    background: #fff8d8;
+    border: 1px solid #eadc9b;
+    border-radius: 12px;
+  }
+
+  .desktop-recommended-notice strong {
+    display: block;
+    margin-bottom: 3px;
+    font-size: 13px;
+    color: #50493e;
+  }
+
+  .desktop-recommended-notice span {
+    display: block;
+    font-size: 12px;
+    line-height: 1.5;
+    color: #6c6457;
+  }
+
+  .desktop-notice-close {
+    flex: 0 0 auto;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    font-size: 19px;
+    line-height: 1;
+    color: #756d61;
+    cursor: pointer;
+  }
+}
