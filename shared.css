@@ -2662,3 +2662,48 @@ line-height:1.05 !important;
     min-width: 0;
   }
 }
+/* =========================================================
+   WRITING HELP REMINDER
+   ========================================================= */
+
+.writing-help-card {
+  background: #fff8d8;
+  border: 1px solid #eadc9b;
+}
+
+.writing-help-card .card-heading {
+  margin-bottom: 8px;
+}
+
+.writing-help-card h2 {
+  margin: 0;
+}
+
+.writing-help-intro {
+  margin: 0 0 10px;
+  font-size: 13px;
+  line-height: 1.55;
+  color: #665e4f;
+}
+
+.writing-help-list {
+  display: grid;
+  gap: 7px;
+}
+
+.writing-help-list span {
+  display: block;
+  padding: 8px 10px;
+  border-radius: 10px;
+  background: rgba(255,255,255,.68);
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.4;
+  color: #50493e;
+}
+
+@media (max-width: 900px) {
+  .writing-help-card {
+    order: -1;
+  }
+}
