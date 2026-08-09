@@ -58,6 +58,26 @@
   </aside>
 
   <main class="notebook-main">
+    <main class="notebook-main">
+
+  <div class="desktop-recommended-notice">
+    <div>
+      <strong>Best on desktop</strong>
+      <span>
+        Notebook works on mobile, but writing and reviewing are easier on a computer.
+      </span>
+    </div>
+
+    <button
+      type="button"
+      class="desktop-notice-close"
+      aria-label="Dismiss"
+    >
+      ×
+    </button>
+  </div>
+
+  <section class="welcome-row">
     <section class="welcome-row">
       <div>
         <h1 id="welcomeHeading">Good evening!</h1>
@@ -835,6 +855,23 @@ window.parent?.postMessage({
   source: "langsnack-journal",
   type: "appReady"
 }, "*");
+  const desktopNotice =
+  document.querySelector(
+    ".desktop-recommended-notice"
+  );
+
+const desktopNoticeClose =
+  document.querySelector(
+    ".desktop-notice-close"
+  );
+
+if (desktopNoticeClose) {
+  desktopNoticeClose.onclick = () => {
+    if (desktopNotice) {
+      desktopNotice.style.display = "none";
+    }
+  };
+}
 </script>
 </body>
 </html>
