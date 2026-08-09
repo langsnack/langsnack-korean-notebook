@@ -3109,7 +3109,12 @@ line-height:1.05 !important;
   .guide-final {
     padding: 32px 18px;
   }
-  .dashboard-grid {
-  align-items: start;
 }
+
+/* Make main writing box less tall on desktop */
+@media (min-width: 901px) {
+  .notebook-paper,
+  .notebook-paper textarea {
+    min-height: 300px;
+  }
 }
