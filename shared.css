@@ -3119,29 +3119,44 @@ line-height:1.05 !important;
   }
 }
 /* =========================================================
-   FIX LARGE GAP BEFORE RECENT WORK
+   FIX DESKTOP DASHBOARD GAP
    ========================================================= */
 
 @media (min-width: 901px) {
 
   .dashboard-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.55fr) minmax(275px, .55fr);
+    grid-template-areas:
+      "writing side"
+      "recent side"
+      "daily side"
+      "tip side";
+    gap: 16px;
     align-items: start;
   }
 
-  .recent-card {
-    grid-column: 1;
-    grid-row: 2;
-    margin-top: 0;
-  }
-
-  .tip-card {
-    grid-column: 1;
-    grid-row: 3;
-    margin-top: 0;
+  .writing-card {
+    grid-area: writing;
   }
 
   .dashboard-stack {
-    grid-column: 2;
-    grid-row: 1 / span 3;
+    grid-area: side;
+    align-self: start;
+  }
+
+  .recent-card {
+    grid-area: recent;
+    margin: 0;
+  }
+
+  .daily-card {
+    grid-area: daily;
+    margin: 0;
+  }
+
+  .tip-card {
+    grid-area: tip;
+    margin: 0;
   }
 }
