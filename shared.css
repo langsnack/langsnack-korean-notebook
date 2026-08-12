@@ -3110,5 +3110,39 @@ line-height:1.05 !important;
     padding: 32px 18px;
   }
 }
+/* =========================================================
+   DASHBOARD TWO-COLUMN LAYOUT
+   ========================================================= */
 
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.55fr) minmax(275px, .55fr);
+  gap: 16px;
+  align-items: start;
+}
+
+.dashboard-left {
+  display: grid;
+  gap: 16px;
+  min-width: 0;
+}
+
+.dashboard-left .recent-card,
+.dashboard-left .tip-card {
+  grid-column: auto;
+}
+
+.dashboard-stack {
+  align-self: start;
+}
+
+@media (max-width: 900px) {
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard-left {
+    grid-template-columns: 1fr;
+  }
+}
 
