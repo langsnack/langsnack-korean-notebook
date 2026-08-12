@@ -91,7 +91,10 @@
     </section>
 
     <div class="dashboard-grid">
-      <section class="dashboard-card writing-card" id="writing">
+
+  <div class="dashboard-left">
+
+    <section class="dashboard-card writing-card" id="writing">
         <div class="card-heading">
           <div><p class="section-kicker" id="writingKicker">Writing workspace</p><h2 id="writingTitle">Start a new writing</h2></div>
           <button class="text-button" id="clearAllBtn" type="button">Clear all</button>
@@ -162,7 +165,17 @@
           <div class="action-group"><button class="button ghost-button" id="saveDraftBtn" type="button">Save draft</button><button class="button green-button" id="submitBtn" type="button">Get feedback</button></div>
         </div>
       </section>
+    <section class="dashboard-card recent-card">
+        <div class="card-heading"><h2 id="recentTitle">Recent work</h2><a class="text-button" href="history.html" id="viewAllWork">View all</a></div>
+        <div class="recent-list" id="entriesList"></div>
+      </section>
 
+      <section class="dashboard-card tip-card">
+        <div class="card-heading"><h2 id="tipTitle">Quick tip</h2></div>
+        <p id="tipText">Writing a little every day builds a stronger habit than writing a lot once in a while. Be consistent! 렛츠고! </p>
+      </section>
+    </div>
+      
       <aside class="dashboard-stack">
         <section class="dashboard-card writing-help-card">
   <div class="card-heading">
@@ -194,15 +207,6 @@
         </section>
       </aside>
 
-      <section class="dashboard-card recent-card">
-        <div class="card-heading"><h2 id="recentTitle">Recent work</h2><a class="text-button" href="history.html" id="viewAllWork">View all</a></div>
-        <div class="recent-list" id="entriesList"></div>
-      </section>
-
-      <section class="dashboard-card tip-card">
-        <div class="card-heading"><h2 id="tipTitle">Quick tip</h2></div>
-        <p id="tipText">Writing a little every day builds a stronger habit than writing a lot once in a while. Be consistent! 렛츠고! </p>
-      </section>
     </div>
 
     <footer class="notebook-footer"><span>© 2026 Langsnack.</span><span><a href="guide.html">Guide</a><a href="#">Support</a><a href="#">Privacy</a><a href="#">Terms</a></span></footer>
